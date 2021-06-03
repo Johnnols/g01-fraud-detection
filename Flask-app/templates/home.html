@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Credit Card Fraud Detection App</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='./styles.css') }}">
+
+<div class="w3-bar w3-black w3-hide-small">
+  <a href="https://web.facebook.com/HamoyeHQ?_rdc=1&_rdr" class="w3-bar-item w3-button"><i class="fa fa-facebook-official"></i></a>
+  <a href="https://twitter.com/hamoyeHQ" class="w3-bar-item w3-button"><i class="fa fa-twitter"></i></a>
+  <a href="https://www.linkedin.com/company/hamoyehq/" class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i></a>
+  <a href="https://www.instagram.com/hamoyeHQ/" class="w3-bar-item w3-button"><i class="fa fa-instagram"></i></a>
+  <a href="https://www.youtube.com/c/hamoyehq" class="w3-bar-item w3-button"><i class="fa fa-youtube"></i></a>
+</div>
+<h1 style="font-family: Verdana ; " >HAMOYE DATA SCIENCE INTERNSHIP 2020</h1>
+</head>
+
+
+<body>
+ <div class="login">
+   <h2>Credit Card Fraud Detection App by Group 01</h2>
+    <h4> Please Input the Transaction ID</h4>
+
+     <!-- Form to enter new data for predictions  -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="number" name="transaction_ID" placeholder="Transaction ID" required="required" />
+      <br>
+      <br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+    {{pred}}
+
+ </div>
+ <div class="w3-display-bottomleft w3-text-white w3-large" style="padding:24px 48px">
+  <a href="https://medium.com/hamoye-blogs/hdsc-stage-g-osp-credit-card-fraud-detection-8d5d72997894">Read article about app here<i class="w3-hover-opacity"></i></a>
+</div>
+
+</body>
+</html>
